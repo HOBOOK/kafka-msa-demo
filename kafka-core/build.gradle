@@ -1,0 +1,9 @@
+bootJar {
+    enabled = false
+}
+jar {
+    enabled = true
+}
+dependencies {
+    implementation('com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.11.4')
+}
