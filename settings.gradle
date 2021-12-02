@@ -2,4 +2,5 @@ rootProject.name = 'kafka-msa-demo'
 include 'kafka-publisher'
 include 'kafka-core'
 include 'kafka-subscriber'
+include 'kafka-subscriber-2'
 

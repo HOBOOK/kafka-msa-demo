@@ -3,3 +3,8 @@ server:
 spring:
   application:
     name: "kafka-publisher"
+  kafka:
+    producer:
+      bootstrap-servers: kafka:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
