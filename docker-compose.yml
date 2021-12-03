@@ -72,7 +72,7 @@ services:
             KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: "1"
             KAFKA_DELETE_TOPIC_ENABLE: "true"
             KAFKA_ADVERTISED_HOST_NAME: kafka
-            KAFKA_CREATE_TOPICS: "ho-1:1:1, ho-2:1:1:delete" # Topic명:Partition개수:Replica개수:cleanup.policy(compact or delete)
+            KAFKA_CREATE_TOPICS: "ho-1:2:1, ho-2:1:1:delete" # Topic명:Partition개수:Replica개수:cleanup.policy(compact or delete)
             KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
         healthcheck:
             test: [ "CMD", "nc", "-z", "localhost", "9092" ]
