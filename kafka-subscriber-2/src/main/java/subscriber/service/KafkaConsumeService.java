@@ -9,7 +9,7 @@ import java.io.IOException;
 @Log4j2
 @Service
 public class KafkaConsumeService {
-    @KafkaListener(topics = "ho-1", groupId = "hobook")
+    @KafkaListener(topics = "ho-1", groupId = "tom")
     public void consume(String message) throws IOException {
         log.info("[kafka-subscriber-2] 메시지 받음 :: " + message);
     }

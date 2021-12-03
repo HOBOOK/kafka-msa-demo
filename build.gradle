@@ -53,3 +53,9 @@ project(':kafka-subscriber-2') {
         implementation project(':kafka-core')
     }
 }
+
+project(':kafka-subscriber-3') {
+    dependencies {
+        implementation project(':kafka-core')
+    }
+}

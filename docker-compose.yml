@@ -31,7 +31,7 @@ services:
         restart: "unless-stopped"
         environment:
             KAFKA_BOOTSTRAP_SERVER: "kafka:9092"
-            KAFKA_GROUP_ID: "hobook"
+            KAFKA_GROUP_ID: "peter"
             TOPICS: "ho-1"
     kafka-subscriber-2:
         build:
@@ -46,7 +46,22 @@ services:
         restart: "unless-stopped"
         environment:
             KAFKA_BOOTSTRAP_SERVER: "kafka:9092"
-            KAFKA_GROUP_ID: "hobook"
+            KAFKA_GROUP_ID: "tom"
+            TOPICS: "ho-1"
+    kafka-subscriber-3:
+        build:
+            context: ./kafka-subscriber-3
+        image: kafka-subscriber-3
+        container_name: kafka-subscriber-3
+        expose:
+            - "5002"
+        depends_on:
+            - kafka
+            - zookeeper
+        restart: "unless-stopped"
+        environment:
+            KAFKA_BOOTSTRAP_SERVER: "kafka:9092"
+            KAFKA_GROUP_ID: "tom"
             TOPICS: "ho-1"
     zookeeper:
         container_name: zookeeper

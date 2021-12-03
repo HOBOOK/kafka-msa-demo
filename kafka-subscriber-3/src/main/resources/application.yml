@@ -1,12 +1,12 @@
 server:
-  port: 5001
+  port: 5003
 spring:
   application:
-    name: "kafka-subscriber"
+    name: "kafka-subscriber-3"
   kafka:
     consumer:
       bootstrap-servers: kafka:9092
-      group-id: peter
+      group-id: tom
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer

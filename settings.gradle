@@ -3,4 +3,5 @@ include 'kafka-publisher'
 include 'kafka-core'
 include 'kafka-subscriber'
 include 'kafka-subscriber-2'
+include 'kafka-subscriber-3'
 
